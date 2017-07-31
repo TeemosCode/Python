@@ -32,7 +32,7 @@ class Ball(pygame.sprite.Sprite):
 		if self.rect.left <= 0 or self.rect.right >= (screen.get_width()- 10):
 			self.horizontalBounce()
 		elif self.rect.top <= 10:
-			self.rect.top = 10
+			self.rect.top = 15
 			self.verticalBounce()
 
 		if self.rect.bottom >= (screen.get_height()-10):
