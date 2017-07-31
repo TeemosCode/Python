@@ -1,0 +1,11 @@
+('/Users/Roger/Desktop/python/Recent/PygameMusicPlayer/mp3Player/build/pygameMixermusiPlayer/setuptools-23.0.0-py3.5.egg',
+ None,
+ {'EGG-INFO', '*.so', '*.py', '*.pyo', '*.pyc', '*.pyd'},
+ 'DATA',
+ [('setuptools/script (dev).tmpl',
+   '/Users/Roger/Desktop/python/Recent/PygameMusicPlayer/mp3Player/build/pygameMixermusiPlayer/setuptools-23.0.0-py3.5.egg/setuptools/script '
+   '(dev).tmpl',
+   'DATA'),
+  ('setuptools/script.tmpl',
+   '/Users/Roger/Desktop/python/Recent/PygameMusicPlayer/mp3Player/build/pygameMixermusiPlayer/setuptools-23.0.0-py3.5.egg/setuptools/script.tmpl',
+   'DATA')])

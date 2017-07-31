@@ -1,0 +1,73 @@
+/* I believe it is cause by the keeping the programming running for too long, and somehow eats up the memory
+of something. (Still finding time to study this part)8/
+
+2017-07-18 23:39:09.601 python[69405:2486780] -[CaptureDelegate doFireTimer:]: unrecognized selector sent to instance 0x7f963366ddd0
+2017-07-18 23:39:09.603 python[69405:2486780] An uncaught exception was raised
+2017-07-18 23:39:09.603 python[69405:2486780] -[CaptureDelegate doFireTimer:]: unrecognized selector sent to instance 0x7f963366ddd0
+2017-07-18 23:39:09.603 python[69405:2486780] (
+	0   CoreFoundation                      0x00007fff99ff603c __exceptionPreprocess + 172
+	1   libobjc.A.dylib                     0x00007fff8f35176e objc_exception_throw + 43
+	2   CoreFoundation                      0x00007fff99ff90ad -[NSObject(NSObject) doesNotRecognizeSelector:] + 205
+	3   CoreFoundation                      0x00007fff99f3ee24 ___forwarding___ + 1028
+	4   CoreFoundation                      0x00007fff99f3e998 _CF_forwarding_prep_0 + 120
+	5   Foundation                          0x00007fff8cb46a23 __NSFireTimer + 95
+	6   CoreFoundation                      0x00007fff99f492e4 __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 20
+	7   CoreFoundation                      0x00007fff99f48f73 __CFRunLoopDoTimer + 1059
+	8   CoreFoundation                      0x00007fff99fbc53d __CFRunLoopDoTimers + 301
+	9   CoreFoundation                      0x00007fff99f04608 __CFRunLoopRun + 2024
+	10  CoreFoundation                      0x00007fff99f03bd8 CFRunLoopRunSpecific + 296
+	11  Foundation                          0x00007fff8cb8bb29 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 278
+	12  Foundation                          0x00007fff8cba9d9e -[NSRunLoop(NSRunLoop) runUntilDate:] + 108
+	13  libopencv_videoio.3.1.0.dylib       0x000000010a363bb1 _ZN12CvCaptureCAM9grabFrameEd + 241
+	14  libopencv_videoio.3.1.0.dylib       0x000000010a3637dc _ZN12CvCaptureCAM18startCaptureDeviceEi + 956
+	15  libopencv_videoio.3.1.0.dylib       0x000000010a36319b _Z24cvCreateCameraCapture_QTi + 107
+	16  libopencv_videoio.3.1.0.dylib       0x000000010a357e33 _ZN2cv12VideoCapture4openEi + 211
+	17  libopencv_videoio.3.1.0.dylib       0x000000010a3578d1 _ZN2cv12VideoCaptureC1Ei + 65
+	18  cv2.cpython-35m-darwin.so           0x0000000108daa94a _ZL37pyopencv_cv_VideoCapture_VideoCaptureP7_objectS0_S0_ + 874
+	19  libpython3.5m.dylib                 0x00000001087bc1fc PyCFunction_Call + 60
+	20  libpython3.5m.dylib                 0x0000000108836f77 PyEval_EvalFrameEx + 26103
+	21  libpython3.5m.dylib                 0x000000010883ada5 _PyEval_EvalCodeWithName + 2421
+	22  libpython3.5m.dylib                 0x0000000108830901 PyEval_EvalCode + 81
+	23  libpython3.5m.dylib                 0x0000000108861f91 PyRun_FileExFlags + 209
+	24  libpython3.5m.dylib                 0x000000010886173d PyRun_SimpleFileExFlags + 829
+	25  libpython3.5m.dylib                 0x0000000108879d6a Py_Main + 3482
+	26  python                              0x0000000108761dc8 main + 216
+	27  python                              0x0000000108761ce4 start + 52
+)
+2017-07-18 23:39:09.604 python[69405:2486780] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[CaptureDelegate doFireTimer:]: unrecognized selector sent to instance 0x7f963366ddd0'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00007fff99ff603c __exceptionPreprocess + 172
+	1   libobjc.A.dylib                     0x00007fff8f35176e objc_exception_throw + 43
+	2   CoreFoundation                      0x00007fff99ff90ad -[NSObject(NSObject) doesNotRecognizeSelector:] + 205
+	3   CoreFoundation                      0x00007fff99f3ee24 ___forwarding___ + 1028
+	4   CoreFoundation                      0x00007fff99f3e998 _CF_forwarding_prep_0 + 120
+	5   Foundation                          0x00007fff8cb46a23 __NSFireTimer + 95
+	6   CoreFoundation                      0x00007fff99f492e4 __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 20
+	7   CoreFoundation                      0x00007fff99f48f73 __CFRunLoopDoTimer + 1059
+	8   CoreFoundation                      0x00007fff99fbc53d __CFRunLoopDoTimers + 301
+	9   CoreFoundation                      0x00007fff99f04608 __CFRunLoopRun + 2024
+	10  CoreFoundation                      0x00007fff99f03bd8 CFRunLoopRunSpecific + 296
+	11  Foundation                          0x00007fff8cb8bb29 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 278
+	12  Foundation                          0x00007fff8cba9d9e -[NSRunLoop(NSRunLoop) runUntilDate:] + 108
+	13  libopencv_videoio.3.1.0.dylib       0x000000010a363bb1 _ZN12CvCaptureCAM9grabFrameEd + 241
+	14  libopencv_videoio.3.1.0.dylib       0x000000010a3637dc _ZN12CvCaptureCAM18startCaptureDeviceEi + 956
+	15  libopencv_videoio.3.1.0.dylib       0x000000010a36319b _Z24cvCreateCameraCapture_QTi + 107
+	16  libopencv_videoio.3.1.0.dylib       0x000000010a357e33 _ZN2cv12VideoCapture4openEi + 211
+	17  libopencv_videoio.3.1.0.dylib       0x000000010a3578d1 _ZN2cv12VideoCaptureC1Ei + 65
+	18  cv2.cpython-35m-darwin.so           0x0000000108daa94a _ZL37pyopencv_cv_VideoCapture_VideoCaptureP7_objectS0_S0_ + 874
+	19  libpython3.5m.dylib                 0x00000001087bc1fc PyCFunction_Call + 60
+	20  libpython3.5m.dylib                 0x0000000108836f77 PyEval_EvalFrameEx + 26103
+	21  libpython3.5m.dylib                 0x000000010883ada5 _PyEval_EvalCodeWithName + 2421
+	22  libpython3.5m.dylib                 0x0000000108830901 PyEval_EvalCode + 81
+	23  libpython3.5m.dylib                 0x0000000108861f91 PyRun_FileExFlags + 209
+	24  libpython3.5m.dylib                 0x000000010886173d PyRun_SimpleFileExFlags + 829
+	25  libpython3.5m.dylib                 0x0000000108879d6a Py_Main + 3482
+	26  python                              0x0000000108761dc8 main + 216
+	27  python                              0x0000000108761ce4 start + 52
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+Abort trap: 6
+
+
+/* This one might be because of the brightness of the background and face (still looking for ways to fix it)*/
