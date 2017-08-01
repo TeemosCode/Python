@@ -32,7 +32,7 @@ class Ball(pygame.sprite.Sprite):
 		if self.rect.left <= 0 or self.rect.right >= (screen.get_width()- 10):
 			self.horizontalBounce()
 		elif self.rect.top <= 10:
-			self.rect.top = 15
+			self.rect.top = 15 # FIxeD!!
 			self.verticalBounce()
 
 		if self.rect.bottom >= (screen.get_height()-10):
@@ -133,7 +133,8 @@ while running:
 			gameover("GameOver!")
 		pad.update()
 
-		hitbrick = pygame.sprite.spritecollide(ball, bricks, True) # if hit, delete the hit object in the sprite group
+		hitbrick = pygame.sprite.spritecollide(ball, bricks, True) 
+		# if hit, delete the hit object in the sprite group
 		if len(hitbrick) > 0:
 			score += len(hitbrick)
 	    	#soundhit.play()
