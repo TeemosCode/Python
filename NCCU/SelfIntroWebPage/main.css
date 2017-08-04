@@ -1,0 +1,41 @@
+.self {
+	display : inline;
+	font-family: cursive;
+	font-size: 20px;
+	color: #00b0ff;
+	
+}
+
+.intro{
+
+	display: inline;
+}
+
+.col-md-3 ol{
+
+	display:block;
+
+}
+
+.heading{
+
+	color:blue;
+
+}
+
+#heading{
+	display:block;
+	color:green;
+	font-size: 150%;
+}
+
+#m{
+
+	display:inline;
+}
+
+#intel{
+
+	color:red;
+
+}

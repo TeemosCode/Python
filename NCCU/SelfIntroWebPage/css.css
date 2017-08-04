@@ -1,0 +1,124 @@
+.container{
+	/*the <div> block that contains the img and intro*/
+	float:left;
+	border: 1px black solid;
+	background-color:rgb(120,189,255);
+	margin:0;
+}	
+
+body{
+	
+	background-color:green;
+	
+}
+
+#big_head_pic{
+	/* the img of me */
+	border: 2px solid blue;
+	float:left;
+}
+
+.self_intro{
+	/* my intro style unter the picture*/
+	border: 2px solid green;
+	width: 267px;
+	background-color:yellow;
+	word-wrap:break-word;
+	text-align:center;
+	
+}
+
+span{
+	/* my name and number*/
+	color: red;
+	border: 1px solid white;
+	
+}
+
+
+ul#codes_learned li {
+	/*the horizontal list of codes i learned*/
+	display:inline;
+	text-align: center;
+	
+}
+
+
+
+
+
+/*codecademy code*/
+.slider-nav {
+  text-align: center;
+  background-color:rgb(135,241,255);
+}
+
+.arrow-prev {
+  margin-right: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+}
+
+.arrow-next {
+  margin-left: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+}
+
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.slider-dots li {
+  color: #bbbcbc;
+  display: inline;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.slider-dots li.active-dot {
+  color: #363636;
+}
+
+
+
+/*my slide codes*/
+
+
+
+
+
+
+.slides{
+	  
+	  /*!!!!!! This one's important (But if not connected to the internet, the displays blow up)!!!!!*/
+	  background-color:rgb(110,200,225);
+	  background-size: cover;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  display: none;
+	 
+}
+
+
+.slide  col-md-9{
+	border:2px solid black;
+	height:1006px;
+	background-color:rgb(110,200,225);
+}
+
+
+
+.active-slide {
+	border:2px solid black;
+	height:1006px;
+	background-color:rgb(110,200,225);
+    display: block;
+}
+

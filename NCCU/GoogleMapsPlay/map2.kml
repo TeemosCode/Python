@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" hint="target=mars">
+<Document>
+	<name>trumps World.kml</name>
+	<StyleMap id="msn_police">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_police</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_police0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_police">
+		<IconStyle>
+			<color>ff0000aa</color>
+			<scale>4.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/police.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ffffff00</color>
+			<scale>6</scale>
+		</LabelStyle>
+	</Style>
+	<Style id="sh_police0">
+		<IconStyle>
+			<color>ff0000aa</color>
+			<scale>4.96364</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/police.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<LabelStyle>
+			<color>ffffff00</color>
+			<scale>6</scale>
+		</LabelStyle>
+	</Style>
+	<Placemark>
+		<name>trumps World</name>
+		<LookAt>
+			<longitude>122.788721487</longitude>
+			<latitude>96.88986589</latitude>
+			<altitude>12.3658</altitude>
+			<heading>-0.123456789</heading>
+			<tilt>20</tilt>
+			<range>1470362.254569818</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<styleUrl>#msn_police</styleUrl>
+		<Point>
+			<gx:drawOrder>1</gx:drawOrder>
+			<coordinates>123.456789123,87.448833669,20</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
