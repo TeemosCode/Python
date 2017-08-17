@@ -51,6 +51,17 @@ df.ix["Urgot", : ] = 10 # change all of its value to 10
 #SORT DATAFRAME VALUES
 #var = df.sort_values(by = column_name [, ascending = Boolean])
 df1 = df.sort_values(by = "Deaths", ascending = False)
+# sort by index, column name
+#var = df.sort_index(axis = row_column_value (0 or 1, 0 : sort by ROW_Title, 1 : sort by COL_Title) [, ascending = Boolean]) 
+df2 = df.sort_index(axis = 0)
 
+#Deleting Values in Pandas
+#using .drop
+# df = df.drop(column_or_row_name  [, axis = 0 or 1])
+df1 = df.drop("TEETO") #deleting TEETO's KDA, all data
+df2 = df.drop("Deaths", axis = 1) #dropping the kills column, all of it
+df3 = df.drop(["Deaths", "Assists"], axis = 1) # droping more then one, use brackets to put em all in []
+df4 = df.drop(df.index[1:3]) # droping a whole bunch of characters from where to where with their index
+df5 = df.drop(df.columns[0:2], axis = 1) #dropping column data
 
  
