@@ -40,5 +40,17 @@ df.loc[ : "Urgot", "Deaths" : ]  #start to(:) what, something to(:) End
 df.iloc[1, : ]
 df.iloc[1][1] #.iloc is the exact same usage as .loc, but it uses the exact index
 
-df.ix[]  # works exactly like the same
+df.ix[]  # works exactly like the same as the previous two, but a combination of both, can use index and names at the same time
+df.head(10) # list out the from 10 data of the data frame
+df.tail(5) # list our the last 5 data of the data frame
+
+#to change the data of the data frmae
+df.ix["TEETO"]["Deaths"] = 333
+df.ix["Urgot", : ] = 10 # change all of its value to 10
+
+#SORT DATAFRAME VALUES
+#var = df.sort_values(by = column_name [, ascending = Boolean])
+df1 = df.sort_values(by = "Deaths", ascending = False)
+
+
  
