@@ -62,6 +62,60 @@ def sitemake():  # build monitor choice buttons
 
 
 
+win = tk.Tk()
+win.geometry("640x270")
+win.title("PM2.5 InTime Monitor")
+
+city = tk.StringVar() # City's string variables
+site = tk.StringVar() #monitor site's variables
+result1 = tk.StringVar() # result of monitor variables
+citylist = []
+sitelist = []
+listradio = []
+
+# city list
+citylist = [ cit for cit in data["County"] if cit not in citylist] # building the 'unique' city list
+
+print(data)
+count = 0
+for cit in data["County"]:
+	if cit == citylist[0]: # first city's monitor
+		sitelist.append(data.ix[count, 0])
+	count += 1
+
+label1 = tk.Label(win, text = "City : ", pady = 6, fg = "blue", font = ("Times New Roman", 12))
+label1.pack()
+
+frame1 = tk.Frame(win) # cities container
+frame1.pack()
+#city buttons
+for i in range(3):   # 3 lines of buttons container
+	for j in range(8): # each line has 8 buttons
+		n = i * 8 + j # the nth button
+		if n < len(citylist):
+			city1 = citylist[n]
+			rbtem = tk.Radiobutton(frame1, text = city1, variable = city, value = city1, command = rbCity)
+			rbtem.grid(row = i, column = j)  # where buttons go
+			if n ==0 :   # the first city will automatically be chosen at the start
+				rbtem.select()
+
+label2  = tk.Label(win, text = "Monitor : ", pady = 6, fg = "blue", font = ("Times New Roman", 12))
+label2.pack()
+frame2 = tk.Frame(win) #monitor container
+frame2.pack()
+
+sitemake()
+
+btnDown = tk.Button(win, text= "Refresh Data", font=("Times New Roman", 12), command=clickRefresh)
+btnDown.pack(pady=6)
+lblResult1 = tk.Label(win, textvariable=result1, fg="red", font=("Times New Roman", 16))
+lblResult1.pack(pady=6)
+
+rbSite()#shows monitor info
+
+win.mainloop()
+
+
 
 
 	
