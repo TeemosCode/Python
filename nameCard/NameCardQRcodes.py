@@ -11,7 +11,7 @@ img.save("GitHub QrCode")
 #linkedIn
 
 qr = qrcode.QRCode(version = 1, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=5, border=4)
-qr.add_data("https://www.linkedin.com/in/ping-che-ho-a10631120/")
+qr.add_data("https://www.linkedin.com/in/ping-che-roger-ho-a10631120/")
 
 im = qr.make_image()
 im.save("LinkedInQrCode")
