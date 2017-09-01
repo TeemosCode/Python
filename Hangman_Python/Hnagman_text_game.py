@@ -1,11 +1,11 @@
-#encoding = 'UTF-8'
+# -*- encoding = 'UTF-8' -*-
 # getting rid of zip
-#written by the coolest dude on earth: teemo!
-#guess the words fuckass!
-
+# written by the coolest dude on earth: teemo!
+# guess the words *****!
+# gotten rid of all those swear words, was funny looking back though lmao XD
 def match_up(inpt):
     a = '_' * len(inpt)
-    print("Try guessing this u fuckboy!!: " + a + "\n lET'S PLAY A GAME, u have 6 Chances yolo")
+    print("Try guessing this word: " + a + "\n lET'S PLAY A GAME, u have 6 Chances yolo")
     l = list(a)
     words = []
     hp = 6
@@ -13,51 +13,51 @@ def match_up(inpt):
     while hp != 0:
         print('\nHP remaining:\n%d'% hp)
         if (''.join(l)) == server_input:
-            restart= input("Yo fuckboy!! Your little shithead got it right!\nAnswer: %s\nWanna keep hanging?(Y/y):" % ("".join(l)) )
+            restart= input("Yo ****!! You got it right! Congratulations! You survived for another day!!\nAnswer: %s\nWanna keep hanging?(Y/y):" % ("".join(l)) )
             restart = restart.lower()
 #fixed --- 2017/7/31
             if restart == 'y':
                 return True
             else:
-                print("Good bye FUCKBOY!!!")
-                lala.append("shithole")
+                print("Good bye ****!!!")
+                lala.append("FLAG")
                 return False
             
             
-        client_guess = input('Guess the words fuckass!\n:')
+        client_guess = input('Enter the character for guessing, choose carefully~! \n:')
         
 
         if len(client_guess) != 1:
-            print("fuck u mother~~~ guess only ONE character u dumbass!!!!\n What u have now:" , (''.join(l)) )
+            print("Please don't be blind, you can guess only ONE character !!!!\n What u have now:" , (''.join(l)) )
 
 
         elif client_guess not in server_input :
             if client_guess in words:
-                print('You mother fucker!! I ALREADY told u u fuckass! its not in the fucking answer dick!\n What u have now:' , (''.join(l))  )
+                print('Geeze~! I ALREADY told u u *****!! its not in the answer !\n What u have now:' , (''.join(l))  )
             else:
                 words.append(client_guess)
                 hp -= 1
-                print('word not in answer ,fuckass lost 1 HP, you suck!\n What u have now:' , (''.join(l)) )
+                print('word NOT in answer! Lost 1 HP, you\'re dying~!\n What u have now:' , (''.join(l)) )
         elif client_guess in server_input:
             if client_guess in words:
-                print('You\'ve already guessed this once u fuckboy!!\n What u have now:' , (''.join(l)) )
+                print('You\'ve already guessed this once, please guess another new one, don\'t wana get urself killed eh?!!\n What u have now:' , (''.join(l)) )
             else:
-                print('\'%s\' in answer, dayum shit luck fuckass!!'% client_guess)            
+                print('\'%s\' in answer, NICE GUESS!!!'% client_guess)            
                 words.append(client_guess)
                 i = 0
                 for c in server_input:
                     if c == client_guess:
                         l[i] = client_guess
                         i += 1
-                        print('the answer now looks like this fuckass:\n%s' % (''.join(l)) )
+                        print('The answer now looks like this : \n%s' % (''.join(l)) )
                     else:
                         i+= 1
     if len(lala) > 0 :
         pass
     else:
         print('\nHP remaining:\n%d'% hp)
-        print('fuckass lost all the HP,u dead man, man u suck!')
-        restart = input("Yo fuckboy!! Your little shithead crave for another HOLE!\nWanna keep hanging?(Y/y):"  )
+        print('*****! lost all the HP,u dead man. You got HANGED!')
+        restart = input("Good Try though!\nWanna keep hanging?(Y/y):"  )
         restart.lower()
         if restart == 'y':
             match_up(server_input)
@@ -68,13 +68,12 @@ def match_up(inpt):
 
 
 if __name__ == '__main__':
-    server_input = input('let thoses asses guess a word yo!')
-    while server_input != 'fuck':
+    server_input = input('Enter a word for Guessing!\n:')
+    while server_input != 'TeemoHasDied666':
         keepgoing = match_up(server_input)
         if not keepgoing:
             print("Bye~!!")
             break
         else:
-            server_input = input('let thoses asses guess a word yo!')
+            server_input = input('Enter a word for Guessing!\n:')
         
-
